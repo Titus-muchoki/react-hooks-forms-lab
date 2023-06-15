@@ -12,6 +12,15 @@ function ItemForm({onItemFormSubmit}) {
   function handleCategoryChange(event){
     setCategory(event.target.value)
   }
+
+   function handleSubmit(event){
+    event.preventDefault();
+    onItemFormSubmit({
+      id: uuid(),
+      name,
+      category,
+    });
+   }
   return (
     <form className="NewItem">
       <label>
