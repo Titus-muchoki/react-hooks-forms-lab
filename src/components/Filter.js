@@ -1,16 +1,17 @@
-import React, {useState} from "react";
+import React from "react";
 
 function Filter({search, onSearchChange, onCategoryChange }) {
 
   function handleSearchChange(event){
     onSearchChange(event.target.value);
   }
+  
   return (
     <div className="Filter">
       <input type="text" 
       name="search" 
       placeholder="Search..." 
-      value ={onSearchChange}
+      value ={search}
       onChange ={handleSearchChange}
       />
 
